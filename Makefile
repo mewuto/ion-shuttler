@@ -5,7 +5,7 @@ build:
 	docker build --no-cache -t ion_shuttler .
 
 run:
-	docker run -p 8888:8888 -v $(shell pwd):/home/jovyan/work -d --name ion_shuttler_container_dev ion_shuttler
+	docker run -p 8888:8888 -v $(shell pwd):/home/jovyan/work -d --name ion_shuttler_container ion_shuttler
 
 jn:
 	jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
